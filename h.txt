@@ -1,0 +1,43 @@
+wget https://www.apachefriends.org/xampp-files/7.4.13/xampp-linux-x64-7.4.13-0-installer.run
+chmod +x xampp-linux-x64-7.4.13-0-installer.run
+./xampp-linux-x64-7.4.13-0-installer.run
+apt install composer
+    make swap
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+free -m
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
+composer create-project --prefer-dist laravel/laravel
+sudo apt-get install php7.4-xml
+composer require --dev barryvdh/laravel-ide-helper
+composer require --dev barryvdh/laravel-debugbar
+composer require laravel/ui
+php artisan ui bootstrap --auth
+apt install npm
+npm install
+npm update
+npm audit fix
+npm run dev
+/opt/lampp/xampp restartapache
+php artisan serve
+chmod 777 -R /opt/lampp/htdocs/laravel/storage
+php artisan ide-helper:generate
+php artisan ide-helper:meta
+cd /opt/lampp/bin
+./mysql -uroot -p
+composer update
+apt install php7.4-mysql
+php artisan make:model BlogCategory -m
+php artisan make:model BlogPost -m
+php artisan migrate
+php artisan make:seeder BlogCategoriesTableSeeder
+php artisan make:seeder UsersTableSeeder
+composer require laravel/legacy-factories
+composer require laravel/helpers
+php artisan migrate:refresh --seed
+
+aga
+
