@@ -41,3 +41,4 @@ php artisan migrate:refresh --seed
 
 jgfjdfxhjgfxnsfg;,hx';ng;'sf;'n.;'snt;'sht
 123
+123
