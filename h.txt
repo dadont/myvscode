@@ -39,5 +39,3 @@ composer require laravel/legacy-factories
 composer require laravel/helpers
 php artisan migrate:refresh --seed
 
-aga
-
