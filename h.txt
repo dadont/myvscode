@@ -39,8 +39,5 @@ composer require laravel/legacy-factories
 composer require laravel/helpers
 php artisan migrate:refresh --seed
 
-<<<<<<< HEAD
 aga
 
-=======
->>>>>>> 3e29e0a060d7da8ac3f32dd02b6184ccc92e1812
